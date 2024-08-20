@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+
+    box-sizing: border-box;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --color-bg: rgb(31, 31, 33);
+    --color-hover-bg: rgb(55, 54, 57);
+    --color-secondary-bg: rgb(38, 38, 40);
+
+    --color-icon-fg: rgb(143, 143, 145);
+    --color-text-fg: rgb(190, 190, 190);
+
+    --border: 2px solid rgb(55, 54, 57);
+}
+
+html,
+body,
+#app,
+main {
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+
+    background-color: var(--color-bg);
+    color: var(--color-text-fg);
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 12px;
+
+    & > div {
+        width: 100%;
+        max-width: 420px;
+        height: max-content;
+        min-height: 360px;
+
+        overflow-y: scroll;
+
+        padding: 20px;
+
+        background-color: rgb(20, 20, 23);
+        border-radius: 20px;
+    }
+    & > section {
+        width: 100%;
+        max-width: 420px;
+        height: max-content;
+
+        display: flex;
+        gap: 12px;
+
+        padding: 20px 16px;
+
+        background-color: rgb(20, 20, 23);
+        border-radius: 20px;
+
+        & > svg {
+            min-width: 24px;
+        }
+    }
+}
+
+button,
+input,
+textarea,
+select {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+button {
+    cursor: pointer;
+}

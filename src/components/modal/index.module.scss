@@ -1,0 +1,78 @@
+.modalContainer {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(20, 20, 20, 0.65);
+    backdrop-filter: blur(5px);
+
+    z-index: 1000;
+
+    padding: 12px;
+
+    &[data-visible="true"] {
+        display: flex;
+    }
+}
+
+.modal {
+    width: 100%;
+    max-width: 420px;
+    height: max-content;
+
+    position: relative;
+
+    padding: 20px 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    background-color: var(--color-bg);
+
+    border-radius: 20px;
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    & input {
+        width: 100%;
+
+        padding: 8px 12px;
+
+        border: var(--border);
+        border-radius: 8px;
+    }
+    & button[type] {
+        width: 100%;
+
+        padding: 12px 20px;
+
+        background-color: rgb(230, 230, 234);
+        color: rgb(20, 20, 20);
+
+        border-radius: 8px;
+    }
+}
+
+.modalClose {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-secondary-bg);
+
+    border-radius: 100px;
+}
